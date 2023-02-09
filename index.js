@@ -1,22 +1,22 @@
 import  express  from "express";
 import "dotenv/config";
-import "./database/mongoConnect.js";
+import "./src/database/mongoConnect.js";
     
 //ImportRoutes
-import userRouter from "./routes/user.router.js";
-import ticketRouter from "./routes/tickets.router.js";
-import predictionRouter from "./routes/predictions.router.js";
-import matchRouter from "./routes/matches.router.js";
-import storeRouter from "./routes/store.router.js";
-import utilsRouter from "./routes/utils.router.js";
-import challengeRouter from "./routes/challengeRoom.router.js"
+import userRouter from "./src/routes/user.router.js";
+import ticketRouter from "./src/routes/tickets.router.js";
+import predictionRouter from "./src/routes/predictions.router.js";
+import matchRouter from "./src/routes/matches.router.js";
+import storeRouter from "./src/routes/store.router.js";
+import utilsRouter from "./src/routes/utils.router.js";
+import challengeRouter from "./src/routes/challengeRoom.router.js"
 
 //Security/Utils
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import helmet from "helmet";
 
-import * as deposit from "./helpers/deposits.js";
+import * as deposit from "./src/helpers/deposits.js";
 
 const helloWorld = (req, res) => {
     res.send("Hello World!");
